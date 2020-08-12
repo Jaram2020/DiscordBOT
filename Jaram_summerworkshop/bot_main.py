@@ -10,11 +10,6 @@ import datetime
 import time
 from apscheduler.schedulers.asyncio import AsyncIOScheduler
 
-
-#Papago API id/pw
-n_id = "JLPMmTXOBkFMJ7rhAm1u"
-n_secret = "WUECYHv2Wg"
-
 sched = AsyncIOScheduler()
 sched.start()
 client = discord.Client()
@@ -128,7 +123,6 @@ embed.add_field(name = "#add sched YYYY MM DD HH mm " , value = "특정 날짜�
 embed.add_field(name = "#rmv sched schedule" , value = "추가한 스케줄을 제거합니다.", inline = False)
 embed.add_field(name = "#게임을 시작하자", value = "봇과 가위바위보 게임을 시작합니다.", inline = False)
 embed.add_field(name = "#ping", value = "Discord 서버와의 반응속도를 확인합니다.", inline = False)
-embed.add_field(name = "#vote", value = "투표를 진행합니다. #vote help를 쳐서 더 자세한 기능을 확인하세요.", inline = False)
 embed.set_footer(text = "Jaram summer workshop Team 5 / Powered by discord.py OSP")
 
 # 2.팀스플릿  //team_Split 임종협
@@ -366,7 +360,8 @@ async def game(message):
         return
 
 
-# #디스코드 봇 token
-client.run('NzQyNTcyNDMzMjk4Njg2MDAz.XzIEeA.7hh6zcrhppHh1p4N8qX801vNEbY')
-n_id = "JLPMmTXOBkFMJ7rhAm1u"
-n_secret = "WUECYHv2Wg"
+#디스코드 봇 token
+client.run('token.discord.bot')
+#Papago API id/pw
+n_id = "papago.api.id"
+n_secret = "papago.api.secret"
